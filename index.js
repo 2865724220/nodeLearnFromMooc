@@ -115,3 +115,32 @@
 // })
 
 // // async await
+const mysql = require('mysql')
+
+// 创建连接对象
+
+const connect = mysql.createConnection({
+    host:'127.0.0.1',
+    user:'root',
+    password:'Gyz@1024',
+    port:'3306',
+    database:'myblog'
+})
+
+
+// 开始连接数据库
+connect.connect()
+
+// 执行sql语句
+const sql = "select * from users"
+connect.query(sql,(err,result)=>{
+    if(err){
+        console.log('err---',err)
+        return
+    }
+    console.log('result---',result)
+})
+
+// close connect
+
+connect.end()
