@@ -132,7 +132,7 @@ const connect = mysql.createConnection({
 connect.connect()
 
 // 执行sql语句
-const sql = "select * from users"
+const sql = "insert into blogs(title,content,createtime,author) values('标题C','内容C',1588836426640,'zhangsan12');"
 connect.query(sql,(err,result)=>{
     if(err){
         console.log('err---',err)
