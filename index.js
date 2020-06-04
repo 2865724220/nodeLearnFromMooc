@@ -115,32 +115,31 @@
 // })
 
 // // async await
-const mysql = require('mysql')
+// const mysql = require('mysql')
 
-// 创建连接对象
+// // 创建连接对象
+// const connect = mysql.createConnection({
+//     host:'127.0.0.1',
+//     user:'root',
+//     password:'Gyz@1024',
+//     port:'3306',
+//     database:'myblog'
+// })
 
-const connect = mysql.createConnection({
-    host:'127.0.0.1',
-    user:'root',
-    password:'Gyz@1024',
-    port:'3306',
-    database:'myblog'
-})
 
+// // 开始连接数据库
+// connect.connect()
 
-// 开始连接数据库
-connect.connect()
+// // 执行sql语句
+// const sql = "insert into blogs(title,content,createtime,author) values('标题C','内容C',1588836426640,'zhangsan12');"
+// connect.query(sql,(err,result)=>{
+//     if(err){
+//         console.log('err---',err)
+//         return
+//     }
+//     console.log('result---',result)
+// })
 
-// 执行sql语句
-const sql = "insert into blogs(title,content,createtime,author) values('标题C','内容C',1588836426640,'zhangsan12');"
-connect.query(sql,(err,result)=>{
-    if(err){
-        console.log('err---',err)
-        return
-    }
-    console.log('result---',result)
-})
+// // close connect
 
-// close connect
-
-connect.end()
+// connect.end()
